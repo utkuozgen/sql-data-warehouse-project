@@ -3,7 +3,7 @@
 Stored Procedure: Load Bronze Layer (Source -> Bronze)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Aim:
-  This procedure load data into the "bronze" layer from external CSV files
+  This procedure loads data into the "bronze" layer from external CSV files
 
 Function:
   Truncates the bronze tables before loading data
@@ -135,7 +135,7 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		PRINT '%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%';
-		PRINT 'ERROR OCCURED DURING LOADING BRONZE LAYER';
+		PRINT 'ERROR OCCURED WHILE LOADING BRONZE LAYER';
 		PRINT 'Error Massage' + ERROR_MESSAGE();
 		PRINT 'Error Massage' + CAST (ERROR_NUMBER() AS NVARCHAR);
 		PRINT 'Error Massage' + CAST (ERROR_STATE() AS NVARCHAR);
