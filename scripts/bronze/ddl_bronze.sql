@@ -3,7 +3,7 @@
 DDL Script: Create Bronze Tables
 --------------------------------------------------------------------------
 Aim:
-    Script creates tables in "broze" schema, dropping tables if they already exist.
+    Script creates tables in "bronze" schema, dropping tables if they already exist.
 */
 
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
