@@ -29,7 +29,7 @@ SELECT
 	CASE WHEN ci.cst_gndr != 'n/a' THEN ci.cst_gndr -- CRM is the master for gender info
 		 ELSE COALESCE(ca.gen, 'n/a')
 	END AS gender,
-	ca.bdate AS birth_date,
+	ca.bdate AS birthdate,
 	ci.cst_create_date AS create_date
 FROM silver.crm_cust_info ci
 LEFT JOIN silver.erp_cust_az12 ca
@@ -73,7 +73,7 @@ GO
 
 CREATE VIEW gold.fact_sales AS
 SELECT
-    sd.sls_ord_num AS order_numer,
+    sd.sls_ord_num AS order_number,
     pr.product_key,
     cu.customer_key,
     sd.sls_order_dt AS order_date,
